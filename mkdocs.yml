@@ -1,0 +1,13 @@
+site_name: FreeA7's Site
+
+nav:
+- "About me": index.md
+- "Share konwledge":
+  - "backend":
+    - "nginx":
+      - "install Openssl": shareknowledge/backend/nginx/install_openssl.md
+      - "install Pcre & Zlib": shareknowledge/backend/nginx/install_pcre_zlib.md
+      - "install Nginx": shareknowledge/backend/nginx/install_nginx.md
+
+theme:
+  name: 'material'
