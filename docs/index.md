@@ -1,8 +1,7 @@
 # FreeA7's Site
 
-My name is FreeA7 and my girlfriend is **sk**
+My name is **FreeA7**
 ***
-**<u>I love her</u>**
+**<u>Yes, it's me</u>**
 ***
 ![redpig](images/redpig.jpg)
-Yes, it's me
