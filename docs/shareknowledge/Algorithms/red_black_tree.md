@@ -9,13 +9,6 @@ MathJax = {
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
 
-<style>
-table {
-margin: auto;
-
-}
-</style>
-
 # Red Black Tree
 ***
 
@@ -34,7 +27,7 @@ margin: auto;
 
 **Black Height** is the number of black nodes on the path from root to a leaf.
 
-> A red-black tree of height $h$ has black $height\ge\frac{h}{2}$
+> A red-black tree of height $h$ has $height\ge\frac{h}{2}$
 
 Every red-black tree with $n$ nodes has $height\le2\log_2(n+1)$
 
@@ -88,6 +81,8 @@ The nearest node couldn't be a node with two children, because if the node has t
 
 e.g.
 
+![red_black_tree_shadow](../../images/red_black_tree_shadow.jpg)
+
 So if we want to delete 20, we can choose from 19 and 30. 18 has two children, so one of them must have shorter distance than 18.
 
 ### Red Black Tree Deletion
@@ -99,6 +94,8 @@ $R$ : The node which will replace $D$
 $X$ : The child of $R$
 
 $S$ : The sibling of $X$
+
+#### Delete and Replace
 
 1. The first step of deletion is perform a standard BST deletion
 > $R$ will be recolored as $D$ to keep the black height of $D$ subtree remaining. $X$ will be recolored as $R$ to make sure the black height of $R$ subtree remain.
@@ -116,17 +113,55 @@ This table shows all the cases of $D$ and $R$. Break means that deletion complet
 But what will happen after replacing?
 
 1. $R$ Null $D$ Black
+![red_black_tree_deletion_R_Null_D_Black](../../images/red_black_tree_deletion_R_Null_D_Black.jpg)
 2. $R$ Black $D$ Black
-3. $R$ Null $D$ Red
+![red_black_tree_deletion_R_Black_D_Black](../../images/red_black_tree_deletion_R_Black_D_Black.jpg)
+3. $R$ Black $D$ Red
+![red_black_tree_deletion_R_Black_D_Red](../../images/red_black_tree_deletion_R_Black_D_Red.jpg)
+
+In these cases, replacing leads to a partial imbalanced subtree so our target is balancing this subtree. We call the partial imbalanced trees as min imbalanced trees of red-black tree.
 
 **Min Imbalanced Tree** is the minimum subtree of red-black tree which is imbalanced. Balancing the whole tree is just balancing Min Imbalanced Tree.
 
 The possible value of $X$ is black/red/Null. But the possible value of $S$ is what? We know before BST Deletion the tree is balancd, so:
 
-> 1. R Null D Black
-> ![red_black_tree_deletion_R_Null_D_Black](../../images/red_black_tree_deletion_R_Null_D_Black.jpg)
-> 2. R Black D Black
-> ![red_black_tree_deletion_R_Black_D_Black](../../images/red_black_tree_deletion_R_Black_D_Black.jpg)
-> 3. R Black D Red
-> ![red_black_tree_deletion_R_Black_D_Red](../../images/red_black_tree_deletion_R_Black_D_Red.jpg)
+1. $R$ Null $D$ Black
+
+    $T$ is sibling after replaceing. For $D$ is black sibling is red/black.
+
+2. $R$ Black $D$ Black
+
+    $R$ is black so $S$ is red/black.
+
+3. $R$ Black $D$ Red
+
+    $R$ is black so $S$ is red/black.
+
+So color of sibling is only red/black.
+
+|   Color   | $S$ Black | $S$ Red |
+|:---------:|:---------:|:-------:|
+| $X$ Black |   Case 1  |  Case 2 |
+|  $X$ Red  |   Case 3  |  Case 4 |
+|  $X$ Null |   Case 5  |  Case 6 |
+
+Our target is balancing min imbalanced tree but how to?
+
+![Sibling & X](../../images/red_black_tree_Sibling&X.jpg)
+
+1. $Subtree 1 - 1$
+2. $Subtree 2 + 1$
+
+But except $Subtree P$, there is other subtrees, e.g.
+
+![Other Subtree](../../images/red_black_tree_other_subtree.jpg)
+
+If we use method 1, $Subtree 1 = Subtree 2 < Subtree 3 = Subtree 4$ and it isn't balanced yet. So method is wrong? No. Because after using method, $Subtree G$ has become new min imbalanced tree and we set $P$ as new $X$ then repeat the above step until $P$ is root. When $P$ is root there is no other subtree and the whole tree is balanced.
+
+If we use method 2, $Subtree 1 = Subtree 2 = Subtree 3 = Subtree 4$ and the whole tree has been balanced.
+
+#### Balance
+
+
+
 
