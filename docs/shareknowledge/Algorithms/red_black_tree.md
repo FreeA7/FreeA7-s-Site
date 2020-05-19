@@ -156,11 +156,26 @@ But except $Subtree P$, there is other subtrees, e.g.
 
 ![Other Subtree](../../images/red_black_tree_other_subtree.jpg)
 
-If we use method 1, $Subtree 1 = Subtree 2 < Subtree 3 = Subtree 4$ and it isn't balanced yet. So method is wrong? No. Because after using method, $Subtree G$ has become new min imbalanced tree and we set $P$ as new $X$ then repeat the above step until $P$ is root. When $P$ is root there is no other subtree and the whole tree is balanced.
+If we use method 1, $Subtree 1 = Subtree 2 < Subtree 3 = Subtree 4$ and it isn't balanced yet. So method 1 is wrong? No. Because after using method, $Subtree G$ has become new min imbalanced tree and we set $P$ as new $X$ then repeat the above step until $P$ is root. When $P$ is root there is no other subtree and the whole tree is balanced.
 
 If we use method 2, $Subtree 1 = Subtree 2 = Subtree 3 = Subtree 4$ and the whole tree has been balanced.
 
 #### Balance
+
+Before discussing each ease in balancing, there is another question need to be consider. What operations will lead to method 1 and what operations will lead to method 2？
+
+1. Recoloring
+	1. Black $\Rightarrow$ Red: Method 1
+    2. Red $\Rightarrow$ Black: Method 2
+
+2. Rotation
+
+![Rotation](../../images/red_black_tree_rotation.jpg)
+
+If all nodes are black, $Subtree 1 - 1$ and $Subtree 2 + 1$ after rotation. So we have to decide the strategy to take according to the specific case.
+
+
+
 
 
 
