@@ -2,7 +2,7 @@ site_name: FreeA7's Site
 
 nav:
 - "About me": index.md
-- "Causerie":
+- "Causeries":
   - "写在前边": causeries/写在前边.md
   - "A7观察":
     - "学生作弊被抓坠亡": causeries/A7观察/学生作弊被抓坠亡.md
