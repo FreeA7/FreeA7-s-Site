@@ -3,13 +3,13 @@ site_name: FreeA7's Site
 nav:
 - "About me": index.md
 - "Causerie":
-  - "写在前边": causerie/写在前边.md
+  - "写在前边": causeries/写在前边.md
   - "A7观察":
-    - "学生作弊被抓坠亡": causerie/A7观察/学生作弊被抓坠亡.md
-    - "3人冒充老干妈骗腾讯": causerie/A7观察/3人冒充老干妈骗腾讯.md
-    - "香港国安法": causerie/A7观察/香港国安法.md
+    - "学生作弊被抓坠亡": causeries/A7观察/学生作弊被抓坠亡.md
+    - "3人冒充老干妈骗腾讯": causeries/A7观察/3人冒充老干妈骗腾讯.md
+    - "香港国安法": causeries/A7观察/香港国安法.md
   - "A7读书":
-    - "社会契约论": causerie/A7读书/社会契约论.md
+    - "社会契约论": causeries/A7读书/社会契约论.md
   # - "A7漫谈":
 - "Share konwledge":
   - "Algorithms":
