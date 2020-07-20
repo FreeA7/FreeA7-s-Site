@@ -10,7 +10,8 @@ nav:
     - "香港国安法": causeries/A7观察/香港国安法.md
   - "A7读书":
     - "社会契约论": causeries/A7读书/社会契约论.md
-  # - "A7漫谈":
+  - "A7漫谈":
+    - "被追尾小车祸有感": causeries/A7漫谈/被追尾小车祸有感.md
 - "Share konwledge":
   - "Algorithms":
     - "Red Black Tree": shareknowledge/Algorithms/red_black_tree.md
