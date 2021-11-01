@@ -2,6 +2,8 @@ site_name: FreeA7's Site
 
 nav:
 - "About me": index.md
+- "About her":
+  - "2021/11/01": abouther/20211101.md
 - "Causeries":
   - "写在前边": causeries/写在前边.md
   - "A7观察":
