@@ -11,10 +11,13 @@ Created on Mon Nov  1 21:04:31 2021
 import os
 
 htmls = set()
-live2d_js = '''<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
-      <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
-      '''
+# =============================================================================
+# live2d_js = '''<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+#       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+#       <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
+#       '''
+# =============================================================================
+live2d_js = ''
 
 
 for root, dirs, files in os.walk('./site'):
