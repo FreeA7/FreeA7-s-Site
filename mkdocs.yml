@@ -2,14 +2,14 @@ site_name: FreeA7's Site
 
 nav:
 - "About me": index.md
-- "Share konwledge":
+- "Share knowledge":
   - "Algorithms":
     - "Red Black Tree": shareknowledge/Algorithms/red_black_tree.md
   - "Backend":
     - "nginx":
-      - "install Openssl": shareknowledge/Backend/nginx/install_openssl.md
-      - "install Pcre & Zlib": shareknowledge/Backend/nginx/install_pcre_zlib.md
-      - "install Nginx": shareknowledge/Backend/nginx/install_nginx.md
+      - "install Openssl": shareknowledge/backend/nginx/install_openssl.md
+      - "install Pcre & Zlib": shareknowledge/backend/nginx/install_pcre_zlib.md
+      - "install Nginx": shareknowledge/backend/nginx/install_nginx.md
 
 theme:
   name: 'material'
